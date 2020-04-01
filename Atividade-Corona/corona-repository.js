@@ -1,3 +1,4 @@
+
 var db = require('./db')
 
 module.exports = function(database){
@@ -23,11 +24,11 @@ module.exports = function(database){
         },
         maisInfectados: async function(){
             return new Promise(async(resolve, reject) => {
-                await database.all('SELECT (Country),(TotalConfirmed) FROM corona ORDER BY TotalConfirmed DESC LIMIT 20', function(err){
+                await database.all('SELECT (Country),(TotalConfirmed) FROM corona ORDER BY TotalConfirmed DESC LIMIT 20', function(err,valor){
                     if(err){
                         reject(err)
                     }
-                    
+                    resolve(valor)
                 });
             })
         },
