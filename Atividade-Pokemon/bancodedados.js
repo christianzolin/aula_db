@@ -6,6 +6,6 @@ admin.initializeApp({
   databaseURL: "https://pokemon-b3726.firebaseio.com"
 });
 
-var pokedex = "Pokédex"
-var database = admin.database().ref(pokedex);
+var database = admin.database()
+
 module.exports = {database}
