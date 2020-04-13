@@ -1,11 +1,11 @@
-var db = require('./bancodedados.js').database
-var rs = require('readline-sync')
-var axios = require('axios')
 var rp = require('./pokemon-repository')
+var rs = require('readline-sync')
 
-// var pokedex = ref => db.ref(ref)
-// var treinadorRef = nome => db.ref(`Pokédex/${nome}`)
-// var pokemonRef = poke => db.ref(`Pokédex/${nome}/${poke}`)
+// eu não consegui usar a função para voltar para o menu dentro de todas as funções, algumas acabavam atropelando
 
-//estou terminando ainda... 
+console.log('==================================================================== ')
+console.log('Atencao programa em fase beta, pode haver alguns bugs ')
+console.log('==================================================================== \n Digite qualquer tecla para continuar...')
+rs.question()
+console.clear()
 rp.menu()
